@@ -1,0 +1,275 @@
+{
+  "header": {
+    "logoTitle": "Draudze",
+    "logoSubtitle": "Atmodas",
+    "nav": [
+      { "to": "/media", "label": "MEDIJI" },
+      { "to": "/about", "label": "PAR MUMS" },
+      { "to": "/contact", "label": "KONTAKTI" },
+      { "to": "/donate", "label": "ZIEDOT" }
+    ],
+    "themeToDark": "Ieslēgt tumšo tēmu",
+    "themeToLight": "Ieslēgt gaišo tēmu",
+    "menuOpen": "Atvērt izvēlni",
+    "languageLabel": "Valoda",
+    "languages": {
+      "ru": "RU",
+      "lv": "LV",
+      "en": "EN"
+    }
+  },
+  "footer": {
+    "copyright": "Rīgas Iļģuciema Atmodas draudze",
+    "socialAria": "Sociālie tīkli"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Svētdien 11:00 • Slokas iela 90",
+      "title": "Atmodas draudze Rīgā",
+      "subtitle": "Mēs esam baptistu draudze. Mēs ticam Jēzum Kristum un cenšamies dzīvot pēc Bībeles. Ja meklējat draudzi vai vēlaties vienkārši atnākt iepazīties, esat laipni gaidīti.",
+      "ctaFirst": "Esmu šeit pirmo reizi",
+      "ctaSecond": "Skatīties sprediķus",
+      "inviteMain": "Nāciet uz tuvāko dievkalpojumu.",
+      "inviteSub": "Ieeja brīva. Nāciet paši un aiciniet draugus."
+    },
+    "firstVisit": {
+      "title": "Pirmo reizi pie mums?",
+      "text": "Mēs saprotam, ka pirmajā apmeklējumā rodas jautājumi: kas ir baptisti, kam mēs ticam un kādas kalpošanas var būt noderīgas jums un jūsu bērniem. Mēs centīsimies atbildēt uz šiem un citiem svarīgiem jautājumiem.",
+      "cards": [
+        {
+          "title": "Draudze ir ģimene",
+          "text": "Ja vēl neesat atraduši draudzi, kas varētu kļūt par jūsu garīgo ģimeni, mēs jūs ar prieku uzņemsim."
+        },
+        {
+          "title": "Rūpes par bērniem un pusaudžiem",
+          "text": "Mēs pievēršam īpašu uzmanību bērniem un pusaudžiem: svētdienas skolas programma balstās Bībelē, un kalpošana notiek drošā un uzmanīgā vidē."
+        },
+        {
+          "title": "Katrs cilvēks ir svarīgs",
+          "text": "Draudzē ir kalpošanas cilvēkiem dažādos vecumos un dzīves situācijās: vīru, sieviešu, jauniešu, pusaudžu, mazās grupas un citi atbalsta virzieni."
+        }
+      ]
+    },
+    "visitFlow": {
+      "title": "Pirmā vizīte: mierīgi un saprotami",
+      "text": "Mēs cenšamies padarīt pirmo apmeklējumu vienkāršu un saprotamu. Īsumā, kā parasti notiek dievkalpojums.",
+      "steps": [
+        {
+          "title": "Silta sagaidīšana pie ieejas",
+          "text": "Labāk ierasties 10-15 minūtes pirms sākuma. Jūs sagaidīs un palīdzēs atrast vietu."
+        },
+        {
+          "title": "Dziedāšana, lūgšana, sprediķis",
+          "text": "Parasti dievkalpojums ietver kopīgu dziedāšanu, lūgšanu un Bībelē balstītu sprediķi."
+        },
+        {
+          "title": "Sadraudzība pēc dievkalpojuma",
+          "text": "Pēc dievkalpojuma var iepazīties ar cilvēkiem, uzdot jums svarīgos jautājumus un lūgt aizlūgšanu."
+        }
+      ]
+    },
+    "verse": {
+      "text": "\"Cilvēks nedzīvos no maizes vien, bet no ikviena vārda, kas iziet no Dieva mutes.\"",
+      "reference": "Mateja 4:4"
+    },
+    "useful": {
+      "title": "Noderīgas saites",
+      "subtitle": "Ieteicamie kristīgie resursi",
+      "links": [
+        { "title": "Word of Grace (Vankūvera)", "href": "http://www.slovo.org" },
+        { "title": "Salvation Church (Edgewood)", "href": "https://salvationbc.com/" },
+        { "title": "Second Slavic Church (Sacramento)", "href": "https://ssb.church/" },
+        { "title": "Preobrazhenie draudze (Samara)", "href": "http://baptizm.ru/" },
+        { "title": "Maskavas centrālā draudze", "href": "https://mbchurch.ru/" },
+        { "title": "Omskas centrālā draudze", "href": "https://zvezdova1.ru/" },
+        { "title": "Sprediķu kolekcija", "href": "https://old.propovedi.ru/" },
+        { "title": "Bratstvo (notis)", "href": "http://noty-bratstvo.org" },
+        { "title": "Kristīgās fonogrammas", "href": "http://fonki.pro/" },
+        { "title": "Kristīgā mūzika", "href": "https://kg-music.club/" },
+        { "title": "BBN Radio", "href": "https://bbn1.bbnradio.org/russian/" },
+        { "title": "Padziļināta Bībeles studēšana", "href": "http://biblezoom.ru" }
+      ]
+    }
+  },
+  "about": {
+    "title": "Kam mēs ticam un kā dzīvojam",
+    "subtitle": "Šī ir mūsu draudzes misija un vērtības: no personīgas atgriešanās pie Dieva līdz nobriedušai ticības un kalpošanas dzīvei.",
+    "roadmap": [
+      {
+        "icon": "prayer",
+        "title": "Personīga satikšanās ar Dievu",
+        "description": "Mēs ticam, ka ticība netiek mantota tradīcijā, bet sākas ar personīgu nožēlu un paļāvību uz Kristu."
+      },
+      {
+        "icon": "book",
+        "title": "Pamats Dieva Vārdā",
+        "description": "Bībele ir augstākā autoritāte ticībai un draudzes dzīvei."
+      },
+      {
+        "icon": "users",
+        "title": "Draudze kā garīga ģimene",
+        "description": "Mēs dzīvojam sadraudzībā, lūgšanā un savstarpējā atbildībā Dieva priekšā."
+      },
+      {
+        "icon": "growth",
+        "title": "Pārveidojoša ticība",
+        "description": "Evaņģēlijs maina raksturu, attiecības un ikdienas dzīvi."
+      },
+      {
+        "icon": "service",
+        "title": "Aicinājums kalpot",
+        "description": "Katrs ticīgais ir aicināts kalpot ar dāvanām, ko Dievs devis."
+      },
+      {
+        "icon": "mission",
+        "title": "Misija pasaulē",
+        "description": "Mūsu misija ir nest Evaņģēliju un būt Kristus gaismai sabiedrībā."
+      }
+    ]
+  },
+  "media": {
+    "title": "Mediji un materiāli",
+    "subtitle": "Šeit apkopotas draudzes tiešraides, atskaņošanas saraksti un mācību materiāli.",
+    "introNote": "Video arhīvs, dokumenti un mācību resursi vienuviet.",
+    "openPlaylist": "Atvērt sarakstu",
+    "docsTitle": "Organizatoriskie un mācību materiāli",
+    "resources": [
+      {
+        "title": "Dievkalpojumi lūgšanu namā",
+        "description": "Galvenais tiešraižu saraksts.",
+        "href": "https://youtube.com/playlist?list=PL9fMvgLCyQiIPMwt_eEyPD93gFmw7yzRt"
+      },
+      {
+        "title": "Studijas dievkalpojumi (pandēmijas laikā)",
+        "description": "Atsevišķs studijas dievkalpojumu arhīvs.",
+        "href": "https://youtube.com/playlist?list=PL9fMvgLCyQiKV_dUVFLCgg8Are7xinsa9"
+      }
+    ],
+    "documentSections": [
+      {
+        "icon": "docs",
+        "title": "Draudzes statūtu dokumenti",
+        "links": [
+          {
+            "label": "Evaņģēlisko baptistu ticības apliecība",
+            "href": "draudze/documents/Вероисповедание_ЕХБ_1928_года.pdf"
+          },
+          {
+            "label": "Draudzes ATMODA statūti",
+            "href": "draudze/documents/Устав_общины_ПРОБУЖДЕНИЕ.pdf"
+          }
+        ]
+      },
+      {
+        "icon": "music",
+        "title": "Kora kalpošanas mācību materiāli",
+        "links": [
+          {
+            "label": "Vokālais ābecnieks — E.M. Pekerskaja",
+            "href": "draudze/documents/music/Е.М._Пекерская._Вокальный_букварь.pdf"
+          },
+          {
+            "label": "Muzikālās kalpošanas pamati",
+            "href": "draudze/documents/music/Основы_музыкального_служения_Глинская-Савченко.pdf"
+          },
+          {
+            "label": "Nošu mācību grāmata",
+            "href": "draudze/documents/music/Нотная_грамота.pdf"
+          },
+          {
+            "label": "Harmonijas mācību grāmata",
+            "href": "draudze/documents/music/Учебник_по_гармонии_МХО.pdf"
+          }
+        ]
+      },
+      {
+        "icon": "tools",
+        "title": "Skaņu operatoru semināra materiāli (2025. gada 21.-22. marts)",
+        "links": [
+          {
+            "label": "Semināra video ieraksti",
+            "href": "https://youtube.com/playlist?list=PL9fMvgLCyQiIhQmSrSJ4VZy2KTtN53vTl"
+          },
+          {
+            "label": "Prezentācijas un papildu materiāli",
+            "href": "https://mega.nz/folder/qvAFWagY#WFU8oq1Y-kg5Ubgr5Y_OBw"
+          }
+        ]
+      },
+      {
+        "icon": "video",
+        "title": "Draudzes pasākumu materiāli",
+        "links": [
+          {
+            "label": "Bērnu radošais vakars (2025. gada 7. decembris)",
+            "href": "https://youtu.be/4hwh6_OksOc"
+          },
+          {
+            "label": "Kristīgās dzejas un mūzikas vakars (2026. gada 18. janvāris)",
+            "href": "https://youtu.be/yLjKY2_jrgY"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakti",
+    "subtitle": "Ja jums ir jautājumi, lūgšanu vajadzības vai plānojat pirmo apmeklējumu, sazinieties ar mums sev ērtā veidā.",
+    "contacts": [
+      { "name": "Aleksandrs", "phone": "+37120270810", "label": "+371 20270810" },
+      { "name": "Boriss", "phone": "+37129758677", "label": "+371 29758677" }
+    ],
+    "emailLabel": "E-pasts",
+    "cards": {
+      "reach": "Sazināties ar mums",
+      "address": "Adrese un nokļūšana",
+      "schedule": "Tikšanos grafiks",
+      "help": "Kā varam palīdzēt"
+    },
+    "addressLine": "Slokas iela 90, Rīga, LV-1007, Latvija",
+    "routes": [
+      "Autobusi: 30, 38, 39 līdz pieturai \"Slokas iela\".",
+      "Tro­lejbusi: 9, 25 līdz pieturai \"Slokas iela\".",
+      "Tramvaji: 5, 14 līdz pieturai \"Saldus iela\"."
+    ],
+    "mapsLabel": "Atvērt Google Maps",
+    "weeklySchedule": [
+      ["Galvenais dievkalpojums", "Svētdiena, 11:00"],
+      ["Jauniešu tikšanās", "Mēneša 1. un 3. svētdiena, 14:00"],
+      ["Bībeles studija un sadraudzība", "Otrdiena, 18:00"],
+      ["Lūgšanu sadraudzība", "Trešdiena, 18:00"],
+      ["Vecākā kora mēģinājums", "Ceturtdiena, 19:00"],
+      ["Jauniešu kora mēģinājums", "Sestdiena, 17:00"],
+      ["Māsu un brāļu tikšanās", "Mēneša 2. svētdiena, pēc dievkalpojuma"]
+    ],
+    "scheduleNote": "Vasaras periodā atsevišķi jauniešu pasākumi var tikt pārcelti.",
+    "helpItems": [
+      "Ja nevarat sazvanīt uzreiz, atstājiet e-pastu, un mēs ar jums sazināsimies drīzumā.",
+      "Pēc dievkalpojuma var personīgi pieiet kalpotājiem un uzdot jautājumus par apmeklējumu un lūgšanu.",
+      "Jaunajiem viesiem ir cilvēki, kas palīdzēs orientēties un iepazīties ar draudzi."
+    ]
+  },
+  "donate": {
+    "title": "Ziedojumi",
+    "subtitle": "Jūs varat atbalstīt kalpošanu ar pārskaitījumu uz draudzes kontu.",
+    "detailsTitle": "Rekvizīti pārskaitījumam",
+    "supportTitle": "Par kalpošanas atbalstu",
+    "supportText": "Jebkura ziedojuma summa palīdz draudzes kalpošanām, apmācībai, tiešraidēm un rūpēm par cilvēkiem.",
+    "checkText": "Pirms pārskaitījuma, lūdzu, rūpīgi pārbaudiet rekvizītus.",
+    "verse": "\"Jo mēs esam Viņa darbs, Kristū Jēzū radīti labiem darbiem.\"",
+    "verseRef": "Efeziešiem 2:10",
+    "details": [
+      "RIGAS ILGUCIEMA ATMODAS KRIEVU BAPTISTU DRAUDZE",
+      "Reg. Nr.: 90000292561",
+      "Banka: A/S Swedbank",
+      "BIC/SWIFT: HABALV22",
+      "Konts: LV67HABA0551031615476",
+      "Maksajuma merkis: ZIEDOJUMS"
+    ]
+  },
+  "notFound": {
+    "title": "Lapa nav atrasta",
+    "text": "Šāda lapa pašlaik neeksistē.",
+    "home": "Uz sākumlapu"
+  }
+}
