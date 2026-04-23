@@ -93,28 +93,3 @@ main {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
-
-@media (max-width: 780px) {
-  body {
-    font-size: 17px;
-    line-height: 1.58;
-  }
-
-  .container {
-    padding-left: max(14px, env(safe-area-inset-left));
-    padding-right: max(14px, env(safe-area-inset-right));
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .card {
-    padding: var(--space-4);
-    border-radius: 12px;
-  }
-
-  .btn {
-    min-height: 44px;
-    padding: 10px var(--space-4);
-    font-size: 1rem;
-  }
-}

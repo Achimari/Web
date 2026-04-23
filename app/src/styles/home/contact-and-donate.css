@@ -1,0 +1,185 @@
+/* ================= CONTACT/DONATE ================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--contact-block-gap, var(--space-5));
+  align-items: stretch;
+}
+
+.contact-grid-main {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-page .section {
+  --contact-block-gap: var(--space-5);
+  padding: clamp(var(--space-5), 3.4vw, var(--space-6)) 0;
+}
+
+.contact-page .section:first-of-type {
+  padding-bottom: var(--contact-block-gap);
+}
+
+.contact-page .section.section-compact {
+  padding-top: 0;
+  padding-bottom: clamp(var(--space-5), 3.4vw, var(--space-7));
+}
+
+.contact-hero {
+  margin-bottom: var(--space-5);
+}
+
+.contact-page .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.contact-card {
+  padding: var(--space-5);
+  height: 100%;
+}
+
+.contact-page .section.contact-followup-section {
+  padding-top: 0;
+}
+
+.contact-card-head {
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.contact-card-title {
+  margin: 0;
+  font-size: clamp(1.28rem, 1.8vw, 1.58rem);
+  line-height: 1.2;
+}
+
+.contact-actions {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contact-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 11px var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-action-row:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.contact-action-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.contact-action-value {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.contact-address-main {
+  margin: 0 0 var(--space-3);
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.contact-route-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  color: var(--text-secondary);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contact-route-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contact-route-list li svg {
+  color: var(--icon-text);
+  margin-top: 4px;
+  flex-shrink: 0;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.contact-card .schedule-table td:first-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.contact-card .schedule-table td:last-child {
+  font-variant-numeric: tabular-nums;
+}
+
+.contact-help-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-secondary);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contact-help-list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.contact-help-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.contact-card-help {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-help-verse {
+  margin-top: auto;
+}
+
+.donation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.donation-list li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--list-border);
+}
+
+.donate-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found-action {
+  margin-top: var(--space-3);
+  text-align: center;
+}

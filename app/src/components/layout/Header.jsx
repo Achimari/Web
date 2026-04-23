@@ -5,14 +5,12 @@ import { SUPPORTED_LOCALES, useI18n } from "../../i18n";
 import "../../styles/header.css";
 
 export default function Header({ theme, onToggleTheme }) {
-  const [open, setOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const { t, locale, setLocale } = useI18n();
 
   const navLinks = t("header.nav", []);
   const languageLabel = t("header.languageLabel", "Language");
   const languageNames = t("header.languages", {});
-  const navId = "site-nav";
 
   useEffect(() => {
     if (!langOpen) return undefined;
@@ -40,13 +38,7 @@ export default function Header({ theme, onToggleTheme }) {
     };
   }, [langOpen]);
 
-  useEffect(() => {
-    if (open) {
-      setLangOpen(false);
-    }
-  }, [open]);
-
-  const renderLangDropdown = (className, shouldCloseMenu = false) => (
+  const renderLangDropdown = (className) => (
     <div className={className}>
       <button
         type="button"
@@ -72,9 +64,6 @@ export default function Header({ theme, onToggleTheme }) {
             onClick={() => {
               setLocale(code);
               setLangOpen(false);
-              if (shouldCloseMenu) {
-                setOpen(false);
-              }
             }}
           >
             {languageNames[code] || code.toUpperCase()}
@@ -84,36 +73,11 @@ export default function Header({ theme, onToggleTheme }) {
     </div>
   );
 
-  useEffect(() => {
-    if (!open) {
-      document.body.classList.remove("mobile-menu-open");
-      return undefined;
-    }
-
-    const isMobile = window.matchMedia("(max-width: 780px)").matches;
-    if (isMobile) {
-      document.body.classList.add("mobile-menu-open");
-    }
-
-    const onKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setOpen(false);
-      }
-    };
-
-    window.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-      document.body.classList.remove("mobile-menu-open");
-    };
-  }, [open]);
-
   return (
     <header className="header">
       <div className="header-container">
         <div className="header-left">
-          <NavLink to="/" className="logo-block logo-link" onClick={() => setOpen(false)}>
+          <NavLink to="/" className="logo-block logo-link">
             <img
               src="CharchLogo.jpg"
               alt="Church Logo"
@@ -129,25 +93,20 @@ export default function Header({ theme, onToggleTheme }) {
           </NavLink>
         </div>
 
-        <nav id={navId} className={`header-nav ${open ? "active" : ""}`}>
+        <nav className="header-nav">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) => `header-link${isActive ? " active" : ""}`}
-              onClick={() => setOpen(false)}
             >
               {link.label}
             </NavLink>
           ))}
-
-          <div className="mobile-nav-controls">
-            {renderLangDropdown("lang-dropdown mobile-lang-dropdown", true)}
-          </div>
         </nav>
 
         <div className="header-actions">
-          {renderLangDropdown("lang-dropdown header-lang", true)}
+          {renderLangDropdown("lang-dropdown header-lang")}
 
           <button
             type="button"
@@ -160,27 +119,8 @@ export default function Header({ theme, onToggleTheme }) {
               : <FaSun aria-hidden="true" draggable={false} />}
           </button>
 
-          <button
-            className={`menu-btn ${open ? "open" : ""}`}
-            onClick={() => setOpen(!open)}
-            aria-expanded={open}
-            aria-controls={navId}
-            aria-label={open ? t("header.menuClose", "Close menu") : t("header.menuOpen")}
-          >
-            <span className="line line1"></span>
-            <span className="line line2"></span>
-            <span className="line line3"></span>
-          </button>
         </div>
       </div>
-
-      <button
-        type="button"
-        className={`header-overlay ${open ? "active" : ""}`}
-        onClick={() => setOpen(false)}
-        aria-label={t("header.menuClose", "Close menu")}
-        tabIndex={open ? 0 : -1}
-      />
     </header>
   );
 }
