@@ -1,5 +1,8 @@
 import "../styles/home.css";
 import Footer from "../components/layout/Footer";
+import PageHeader from "../components/ui/PageHeader";
+import PageSection from "../components/ui/PageSection";
+import RoadmapSteps from "../components/ui/RoadmapSteps";
 import {
   FaBookOpen,
   FaGlobeEurope,
@@ -25,30 +28,21 @@ export default function About() {
 
   return (
     <main>
-      <section className="section about-roadmap">
-        <div className="container">
-          <header className="page-header about-roadmap-head">
-            <h1 className="section-title page-title">{t("about.title")}</h1>
-            <p className="section-text page-subtitle">{t("about.subtitle")}</p>
-          </header>
+      <PageSection className="about-roadmap">
+        <PageHeader
+          className="about-roadmap-head"
+          title={t("about.title")}
+          subtitle={t("about.subtitle")}
+        />
 
-          <div className="about-roadmap-grid">
-            {faithRoadmap.map((step, index) => {
-              const Icon = iconMap[step.icon] || FaBookOpen;
-              return (
-                <article className="card roadmap-step" key={step.title}>
-                  <span className="roadmap-step-index">{index + 1}</span>
-                  <span className="roadmap-step-icon" aria-hidden="true">
-                    <Icon />
-                  </span>
-                  <h3 className="card-title">{step.title}</h3>
-                  <p className="card-text">{step.description}</p>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+        <RoadmapSteps
+          steps={faithRoadmap}
+          stepClassName="hover-lift-card"
+          descriptionKey="description"
+          twoDigitIndex
+          getIcon={(step) => iconMap[step.icon] || FaBookOpen}
+        />
+      </PageSection>
 
       <Footer />
     </main>

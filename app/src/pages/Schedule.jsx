@@ -1,33 +1,32 @@
 import "../styles/home.css";
 import Footer from "../components/layout/Footer";
+import Card from "../components/ui/Card";
+import PageHeader from "../components/ui/PageHeader";
+import PageSection from "../components/ui/PageSection";
 import { weeklySchedule } from "../data/churchData";
 
 export default function Schedule() {
   return (
     <main>
-      <section className="section">
-        <div className="container">
-          <header className="page-header">
-            <h1 className="section-title page-title">Расписание регулярных встреч</h1>
-            <p className="section-text page-subtitle">
-              Актуальное недельное расписание богослужений и встреч церкви.
-            </p>
-          </header>
-          <div className="schedule-card card">
-            <table className="schedule-table" aria-label="Расписание служений">
-              <tbody>
-                {weeklySchedule.map(([event, time]) => (
-                  <tr key={event}>
-                    <td>{event}</td>
-                    <td>{time}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p className="note-text">В летний период отдельные молодежные мероприятия могут переноситься.</p>
-          </div>
-        </div>
-      </section>
+      <PageSection>
+        <PageHeader
+          title="Расписание регулярных встреч"
+          subtitle="Актуальное недельное расписание богослужений и встреч церкви."
+        />
+        <Card className="schedule-card">
+          <table className="schedule-table" aria-label="Расписание служений">
+            <tbody>
+              {weeklySchedule.map(([event, time]) => (
+                <tr key={event}>
+                  <td>{event}</td>
+                  <td>{time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="note-text">В летний период отдельные молодежные мероприятия могут переноситься.</p>
+        </Card>
+      </PageSection>
 
       <Footer />
     </main>

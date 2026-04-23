@@ -29,6 +29,24 @@ export default function App() {
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme]);
 
+  useEffect(() => {
+    const blockIconDrag = (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const isIconElement = target.closest(".icon-chip, .roadmap-step-icon");
+      const isSvgElement = target instanceof SVGElement;
+      if (isIconElement || isSvgElement) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener("dragstart", blockIconDrag);
+    return () => {
+      document.removeEventListener("dragstart", blockIconDrag);
+    };
+  }, []);
+
   const handleToggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
   };

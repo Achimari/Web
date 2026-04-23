@@ -247,7 +247,11 @@
       "If you cannot reach us right away, leave an email and we will contact you soon.",
       "After service, you can personally talk to church ministers and ask about prayer and visiting.",
       "There are people ready to help new guests get oriented and connected."
-    ]
+    ],
+    "helpVerse": {
+      "text": "\"Cast all your anxiety on Him because He cares for you.\"",
+      "reference": "1 Peter 5:7"
+    }
   },
   "donate": {
     "title": "Donations",

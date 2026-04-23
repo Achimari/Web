@@ -247,7 +247,11 @@
       "Ja nevarat sazvanīt uzreiz, atstājiet e-pastu, un mēs ar jums sazināsimies drīzumā.",
       "Pēc dievkalpojuma var personīgi pieiet kalpotājiem un uzdot jautājumus par apmeklējumu un lūgšanu.",
       "Jaunajiem viesiem ir cilvēki, kas palīdzēs orientēties un iepazīties ar draudzi."
-    ]
+    ],
+    "helpVerse": {
+      "text": "“Visu savu zūdīšanos metiet uz Viņu, jo Viņš gādā par jums.”",
+      "reference": "1. Pētera 5:7"
+    }
   },
   "donate": {
     "title": "Ziedojumi",

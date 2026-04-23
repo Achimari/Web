@@ -21,7 +21,8 @@
   margin: auto;
   padding: 0 var(--padding);
   display: flex;
-  align-items: center;       /* ровное вертикальное выравнивание */
+  align-items: center;
+  /* ровное вертикальное выравнивание */
   justify-content: space-between;
 }
 
@@ -43,12 +44,15 @@
   height: 52px;
   border-radius: 50%;
   opacity: 0.95;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* TEXT NEXT TO LOGO */
 .logo-title {
   font-size: 20px;
-  font-weight: 600;        /* мягче и меньше жирности */
+  font-weight: 600;
+  /* мягче и меньше жирности */
   color: var(--logo-title);
   margin: 0 0 2px 0;
   line-height: 1.1;
@@ -92,7 +96,7 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .header-overlay {
@@ -103,66 +107,146 @@
   display: none;
 }
 
-.lang-switch {
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  width: auto;
+  min-width: 92px;
+  height: 40px;
+  border-radius: 14px;
   display: inline-flex;
   align-items: center;
-  height: 36px;
-  padding: 2px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--surface-elevated);
+  justify-content: center;
+  gap: 6px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-soft);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lang-toggle:hover,
+.lang-toggle.active {
+  border-color: var(--link-card-hover-border);
+  background: var(--surface-soft);
+  color: var(--link);
   box-shadow: var(--shadow-soft);
 }
 
-.lang-btn {
+.lang-toggle svg {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lang-toggle-value {
+  letter-spacing: 0.02em;
+  min-width: 2ch;
+  text-transform: uppercase;
+}
+
+.lang-toggle-chevron {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.lang-toggle-chevron.open {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 130;
+}
+
+.lang-dropdown-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.lang-dropdown-item {
+  width: 100%;
   border: 1px solid transparent;
   background: transparent;
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1;
-  min-width: 42px;
-  height: 30px;
-  padding: 0 11px;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.lang-btn:hover {
   color: var(--text);
-  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.lang-btn.active {
-  color: var(--header-active);
+.lang-dropdown-item:hover {
   background: var(--surface-soft);
-  border-color: var(--border);
 }
 
-.lang-btn:not(.active):hover {
+.lang-dropdown-item.active {
   color: var(--header-active);
+  border-color: var(--link-card-hover-border);
+  background: color-mix(in oklab, var(--surface-soft) 75%, var(--surface) 25%);
 }
 
 .theme-toggle {
   border: 1px solid var(--border);
-  background: var(--surface-elevated);
+  background: var(--surface);
   color: var(--text);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: var(--shadow-soft);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .theme-toggle:hover {
-  border-color: var(--gold);
+  border-color: var(--link-card-hover-border);
+  background: var(--surface-soft);
   color: var(--link);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.theme-toggle svg {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.logo-link,
+.header-link,
+.menu-btn {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .header-link::after {
@@ -205,9 +289,17 @@
   transition: 0.35s ease;
 }
 
-.line1 { top: 9px; }
-.line2 { top: 16px; }
-.line3 { top: 23px; }
+.line1 {
+  top: 9px;
+}
+
+.line2 {
+  top: 16px;
+}
+
+.line3 {
+  top: 23px;
+}
 
 /* MENU BUTTON ANIMATION */
 .menu-btn.open .line1 {
@@ -268,10 +360,6 @@
     display: none;
   }
 
-  .lang-btn {
-    min-width: 38px;
-    padding: 0 9px;
-  }
 }
 
 /* MOBILE VERSION */
@@ -350,9 +438,26 @@
     border-top: 1px solid var(--border);
   }
 
-  .mobile-nav-controls .lang-switch {
+  .mobile-nav-controls .mobile-lang-dropdown {
     width: 100%;
-    justify-content: center;
+  }
+
+  .mobile-nav-controls .lang-toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile-nav-controls .lang-dropdown-menu {
+    position: static;
+    margin-top: 10px;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+  }
+
+  .mobile-nav-controls .lang-dropdown-menu.open {
+    display: block;
   }
 
   .menu-btn {
@@ -365,27 +470,22 @@
   }
 
   .theme-toggle {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     font-size: 15px;
   }
 
-  .lang-switch {
-    height: 36px;
-    border-radius: 17px;
+  .line1 {
+    top: 11px;
   }
 
-  .lang-btn {
-    min-width: 40px;
-    height: 30px;
-    font-size: 13px;
-    padding: 0 10px;
-    border-radius: 12px;
+  .line2 {
+    top: 19px;
   }
 
-  .line1 { top: 11px; }
-  .line2 { top: 19px; }
-  .line3 { top: 27px; }
+  .line3 {
+    top: 27px;
+  }
 
   /* MOBILE LOGO SIZE */
   .header-logo {
@@ -440,8 +540,8 @@
     padding-right: var(--space-3);
   }
 
-  .lang-btn {
-    min-width: 32px;
-    padding: 0 6px;
+  .lang-toggle {
+    min-width: 86px;
+    padding: 0 8px;
   }
 }

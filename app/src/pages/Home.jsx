@@ -2,6 +2,9 @@ import "../styles/home.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/layout/Footer";
 import UsefulLinksCarousel from "../components/ui/UsefulLinksCarousel";
+import PageSection from "../components/ui/PageSection";
+import RoadmapSteps from "../components/ui/RoadmapSteps";
+import Card from "../components/ui/Card";
 import { useI18n } from "../i18n";
 import { FaHeart, FaBookOpen, FaHandsHelping, FaClock, FaMusic, FaComments } from "react-icons/fa";
 
@@ -11,6 +14,8 @@ export default function Home() {
   const firstVisitCards = t("home.firstVisit.cards", []);
   const visitSteps = t("home.visitFlow.steps", []);
   const usefulLinks = t("home.useful.links", []);
+  const firstVisitIcons = [FaHeart, FaBookOpen, FaHandsHelping];
+  const visitStepIcons = [FaClock, FaMusic, FaComments];
 
   return (
     <main className="home-page">
@@ -44,89 +49,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section home-info-section" id="about">
-        <div className="container">
-          <h2 className="section-title">{t("home.firstVisit.title")}</h2>
-          <p className="section-text">{t("home.firstVisit.text")}</p>
-          <div className="info-strip info-strip-spaced">
-            {firstVisitCards[0] && (
-              <article className="info-item">
-                <div className="mini-icon"><FaHeart /></div>
-                <h4>{firstVisitCards[0].title}</h4>
-                <p>{firstVisitCards[0].text}</p>
-              </article>
-            )}
-            {firstVisitCards[1] && (
-              <article className="info-item">
-                <div className="mini-icon"><FaBookOpen /></div>
-                <h4>{firstVisitCards[1].title}</h4>
-                <p>{firstVisitCards[1].text}</p>
-              </article>
-            )}
-            {firstVisitCards[2] && (
-              <article className="info-item">
-                <div className="mini-icon"><FaHandsHelping /></div>
-                <h4>{firstVisitCards[2].title}</h4>
-                <p>{firstVisitCards[2].text}</p>
-              </article>
-            )}
+      <PageSection className="home-info-section" id="about">
+        <h2 className="section-title">{t("home.firstVisit.title")}</h2>
+        <p className="section-text">{t("home.firstVisit.text")}</p>
+        <RoadmapSteps
+          steps={firstVisitCards.slice(0, 3)}
+          gridBaseClass="info-strip"
+          className="info-strip-spaced"
+          stepBaseClass="info-item"
+          stepClassName="hover-lift-card"
+          showIndex={false}
+          iconClassName="icon-chip icon-chip-sm"
+          titleClassName="info-item-title"
+          getIcon={(_, index) => firstVisitIcons[index]}
+        />
+      </PageSection>
+
+      <PageSection className="home-info-section home-visit-section" compact>
+        <header className="about-roadmap-head">
+          <h2 className="section-title">{t("home.visitFlow.title")}</h2>
+          <p className="section-text">{t("home.visitFlow.text")}</p>
+        </header>
+
+        <RoadmapSteps
+          steps={visitSteps}
+          className="visit-roadmap-grid"
+          stepClassName="visit-roadmap-step hover-lift-card"
+          twoDigitIndex
+          getIcon={(_, index) => visitStepIcons[index]}
+          getTitleClassName={(_, index) => (index === 1 ? "visit-step-title-single" : "")}
+        />
+      </PageSection>
+
+      <PageSection className="home-verse-links-section" containerClassName="home-verse-links-wrap" compact id="home-content-start">
+        <Card as="article" className="home-verse">
+          <div className="verse-block verse-block-centered">
+            <p className="verse-text">{t("home.verse.text")}</p>
+            <p className="verse-reference"><em>{t("home.verse.reference")}</em></p>
           </div>
+        </Card>
+
+        <div className="home-links-inline">
+          <h2 className="useful-title">{t("home.useful.title")}</h2>
+          <p className="useful-subtitle">{t("home.useful.subtitle")}</p>
+          <UsefulLinksCarousel items={usefulLinks} />
         </div>
-      </section>
-
-      <section className="section section-compact home-info-section home-visit-section">
-        <div className="container">
-          <header className="about-roadmap-head">
-            <h2 className="section-title">{t("home.visitFlow.title")}</h2>
-            <p className="section-text">{t("home.visitFlow.text")}</p>
-          </header>
-
-          <div className="about-roadmap-grid visit-roadmap-grid">
-            {visitSteps[0] && (
-              <article className="card roadmap-step visit-roadmap-step">
-                <span className="roadmap-step-index">01</span>
-                <span className="roadmap-step-icon" aria-hidden="true"><FaClock /></span>
-                <h3 className="card-title">{visitSteps[0].title}</h3>
-                <p className="card-text">{visitSteps[0].text}</p>
-              </article>
-            )}
-
-            {visitSteps[1] && (
-              <article className="card roadmap-step visit-roadmap-step">
-                <span className="roadmap-step-index">02</span>
-                <span className="roadmap-step-icon" aria-hidden="true"><FaMusic /></span>
-                <h3 className="card-title visit-step-title-single">{visitSteps[1].title}</h3>
-                <p className="card-text">{visitSteps[1].text}</p>
-              </article>
-            )}
-
-            {visitSteps[2] && (
-              <article className="card roadmap-step visit-roadmap-step">
-                <span className="roadmap-step-index">03</span>
-                <span className="roadmap-step-icon" aria-hidden="true"><FaComments /></span>
-                <h3 className="card-title">{visitSteps[2].title}</h3>
-                <p className="card-text">{visitSteps[2].text}</p>
-              </article>
-            )}
-          </div>
-
-        </div>
-      </section>
-
-      <section className="section section-compact home-verse-links-section" id="home-content-start">
-        <div className="container home-verse-links-wrap">
-          <article className="card home-verse">
-            <p>{t("home.verse.text")}</p>
-            <p><em>{t("home.verse.reference")}</em></p>
-          </article>
-
-          <div className="home-links-inline">
-            <h2 className="useful-title">{t("home.useful.title")}</h2>
-            <p className="useful-subtitle">{t("home.useful.subtitle")}</p>
-            <UsefulLinksCarousel items={usefulLinks} />
-          </div>
-        </div>
-      </section>
+      </PageSection>
 
       <Footer />
     </main>
